@@ -1,0 +1,32 @@
+<div class="list-none p-1">
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Due Date</th>
+      <th>Task Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody> 
+    @for (item of todos; track item._id)
+    {
+    <tr>
+     
+        <td>{{ item.todotask }}</td>
+        <td>{{ item.duedate }}</td>
+        <td>{{ item.todostatus }}</td>
+        <td class="actions-column">
+          <button class="edit-button" type="button" (click)="onEdit(item)">
+            Edit
+          </button>
+          <button class="delete-button" type="button" (click)="onDelete(item)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+      
+  </tbody>
+</table>
+</div>

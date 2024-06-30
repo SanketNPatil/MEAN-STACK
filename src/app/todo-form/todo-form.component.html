@@ -1,0 +1,50 @@
+<form class="todo-form" #todoForm="ngForm" (ngSubmit)="submitForm()">
+  <div class="form-row">
+    <div class="form-group">
+      <div class="input-group">
+        <label for="task">Task</label>
+        <input
+          type="text"
+          id="task"
+          placeholder="Enter task"
+          class="form-control"
+          [(ngModel)]="todo.todotask"
+          required
+          name="task"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="duedate">duedate</label>
+        <input
+          type="date"
+          id="date"
+          placeholder="select date"
+          class="form-control"
+          [(ngModel)]="todo.duedate"
+          required
+          name="date"
+        />
+      </div>
+
+      <div class="input-group" id="status-div">
+        <label for="status">Task Status</label>
+        <select id="status" [(ngModel)]="todo.todostatus" name="todostatus">
+          <option value="" disabled selected>Select Status</option>
+          <option [value]="TodoStatus.OPEN">Task open</option>
+          <option [value]="TodoStatus.CLOSE">Mark as complete</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="submit-button-container">
+    <button
+      class="submit-button"
+      type="submit"
+      [disabled]="!todoForm.form.valid"
+    >
+      Save
+    </button>
+  </div>
+</form>

@@ -1,0 +1,58 @@
+.list-none {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.actions-column {
+  text-align: center;
+}
+
+.edit-button, .delete-button {
+  padding: 6px 12px;
+  margin-right: 5px; /* Adjust margin as needed for spacing */
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #2196F3;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
+.actions-column .edit-button {
+  margin-right: 10px; /* Adjust margin as needed for spacing */
+}
